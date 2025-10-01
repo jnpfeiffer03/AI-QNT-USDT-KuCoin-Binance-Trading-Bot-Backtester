@@ -1,4 +1,4 @@
-# AI-QNT-USDT-KuCoin-Binance-Trading-Bot-Backtester
+AI QNT/USDT KuCoin-Binance Trading Bot & Backtester
 
 fork from: https://github.com/asier13/Python-Trading-Bot/
 
