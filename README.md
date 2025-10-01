@@ -1,7 +1,5 @@
 AI QNT/USDT KuCoin-Binance Trading Bot & Backtester
 
-This is a fork from: https://github.com/asier13/Python-Trading-Bot/
-
 This project is a modular, production-grade cryptocurrency trading bot and backtesting suite for KuCoin (using QNT/USDT, but adaptable to any pair), with:
 
     • Live trading (with state recovery, fee simulation, and loss recovery/Martingale option)
@@ -111,5 +109,10 @@ Disclaimer
 Crypto trading is risky.
 This bot is for research and educational use only.
 No warranty is provided. Use with paper trading and backtesting before live deployment!
+
+Credits
+This is a fork from: https://github.com/asier13/Python-Trading-Bot/
+AI Copilot & documentation: OpenAI ChatGPT
+
 
 Trade smart, test everything, and always control your risk. 🚀
