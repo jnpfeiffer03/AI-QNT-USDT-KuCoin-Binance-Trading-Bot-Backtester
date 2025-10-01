@@ -1,6 +1,6 @@
 AI QNT/USDT KuCoin-Binance Trading Bot & Backtester
 
-fork from: https://github.com/asier13/Python-Trading-Bot/
+This is a fork from: https://github.com/asier13/Python-Trading-Bot/
 
 This project is a modular, production-grade cryptocurrency trading bot and backtesting suite for KuCoin (using QNT/USDT, but adaptable to any pair), with:
 
@@ -22,16 +22,16 @@ Features
 
 Directory Structure:
 
-├── main_V3.0.py            # Main live trading bot (KuCoin)
-├── backtesting_V3.0.py     # Backtest your logic over historical data
-├── optimize_params.py       # Grid search optimizer for parameters
-├── config.json             # All strategy settings (pair, TP, SL, RSI, Martingale, etc.)
-├── .env                    # Your KuCoin API keys (never commit this file!)
-├── requirements.txt        # All Python dependencies
+├── main_V3.py                  # Main live trading bot (KuCoin)
+├── backtesting_V3.py           # Backtest your logic over historical data
+├── optimize_params.py          # Grid search optimizer for parameters
+├── config.json                 # All strategy settings (pair, TP, SL, RSI, Martingale, etc.)
+├── .env                        # Your KuCoin API keys (never commit this file!)
+├── requirements.txt            # All Python dependencies
 └── logs/
-    ├── live_trades.csv     # All live trades, in detail
-    ├── live_state.json     # Last known bot state (auto resume)
-    ├── backtesting.csv     # All simulated backtest trades
+    ├── live_trades.csv         # All live trades, in detail
+    ├── live_state.json         # Last known bot state (auto resume)
+    ├── backtesting.csv         # All simulated backtest trades
     └── optimization_results.csv  # Grid search results (best params, ROI, winrate, etc.)
 
 Quick Start
@@ -50,9 +50,9 @@ All settings are in this file. Example:
 {
     "pair": "QNTUSDT",
     "timeframe": "5m",
-    "starting_date": "1 January 2022",
-    "ending_date": "15 November 2023",
-    "initial_bank": 1000,
+    "starting_date": "1 January 2024",
+    "ending_date": "30 December 2024",
+    "initial_bank": 500,
     "fee_rate": 0.001,
     "martingale": true,      // Set to false for fixed size after loss
     "rsi_periods": 14,
@@ -68,17 +68,20 @@ All settings are in this file. Example:
 }
 
 Change pair or strategy values as needed.
+Create logs folder: 
+/logs/live_trades.csv
+/logs/backtesting.csv 
 
 4. Live Trading (with KuCoin)
 Start the bot:
-python3 main_V3.0.py
+python3 main_V3.py
 
 State is saved: You can stop/restart any time, and the bot resumes exactly where it left off.
 All trades and state: Logged in /logs/live_trades.csv and /logs/live_state.json.
 
 5. Backtesting
 Backtest any config (identical to live trading logic):
-python3 backtesting_V3.0.py
+python3 backtesting_V3.py
 
 See /logs/backtesting.csv for full trade log.
 Summary stats printed at end (ROI, winrate, drawdown, etc.)
@@ -102,6 +105,7 @@ Use pandas/Excel/Jupyter to further analyze or plot best settings
     • You can swap out pair, intervals, strategy logic, or API endpoints as needed.
     • To support other coins/exchanges, adjust symbol formats and endpoints in config/code.
     • All bot logic is modular and well-commented for ease of further development.
+
 
 Disclaimer
 Crypto trading is risky.
